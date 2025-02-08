@@ -5,7 +5,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ENBARAJ's Profile</title>
   <style>
-    /* Your existing styles here */
+    /* Reset default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body and background settings */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header styling */
+    header {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      text-align: center;
+      padding: 80px 0;
+      color: white;
+      border-bottom: 5px solid #444;
+    }
+
+    header h1 {
+      font-size: 60px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    /* Navigation Bar styling */
+    nav {
+      background-color: #222;
+      text-align: center;
+      padding: 10px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 25px;
+      margin: 0 15px;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ff6347;
+      transform: scale(1.1);
+      border-radius: 5px;
+    }
+
+    /* Section styles */
+    section {
+      padding: 60px 20px;
+      margin: 30px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #about {
+      background-color: #fff;
+    }
+
+    #skills {
+      background-color: #ff9800;
+      color: white;
+    }
+
+    #contact {
+      background-color: #2196f3;
+      color: white;
+    }
+
+    h2 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px 20px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 40px;
+      }
+
+      nav a {
+        font-size: 16px;
+        padding: 10px 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -13,6 +137,7 @@
   <!-- Header with ENBARAJ's name -->
   <header>
     <h1>ENBARAJ</h1>
+    <p>Passionate Developer | Designer | Marketer</p>
   </header>
 
   <!-- Navigation Bar -->
@@ -22,6 +147,30 @@
     <a href="contact.html">Contact</a>
   </nav>
 
+  <!-- About Section -->
+  <section id="about">
+    <h2>About ENBARAJ</h2>
+    <p>ENBARAJ is a passionate individual with diverse interests in technology, design, and digital marketing. Always eager to learn and innovate.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <p>ENBARAJ has expertise in various fields including web development, graphic design, and digital marketing. Always looking for new challenges!</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact ENBARAJ</h2>
+    <p>Feel free to get in touch with ENBARAJ through the following channels:</p>
+    <ul>
+      <li>Email: enbaraj@example.com</li>
+      <li>Phone: +123 456 7890</li>
+      <li>Social Media: @ENBARAJOfficial</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 ENBARAJ | All Rights Reserved</p>
   </footer>
