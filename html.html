@@ -13,7 +13,6 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            /* Use a local image file as background */
             background: url('game.jpg') no-repeat center center fixed;
             background-size: cover;
             display: flex;
@@ -24,7 +23,7 @@
         }
 
         .login-container {
-            background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             width: 100%;
@@ -89,32 +88,17 @@
             background-color: #0056b3;
         }
 
-        .forgot-password {
+        .credentials-request {
             margin-top: 15px;
             font-size: 14px;
             color: #007BFF;
         }
 
-        .forgot-password a {
+        .credentials-request a {
             text-decoration: none;
         }
 
-        .forgot-password a:hover {
-            text-decoration: underline;
-        }
-
-        .signup-link {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .signup-link a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        .signup-link a:hover {
+        .credentials-request a:hover {
             text-decoration: underline;
         }
 
@@ -152,12 +136,12 @@
             </div>
             <button type="submit" class="button">Login</button>
         </form>
-        <div class="forgot-password">
-            <a href="#">Forgot Password?</a>
+        
+        <!-- Replaced the "Forgot Password?" and "Sign Up" with "Request Credentials" link -->
+        <div class="credentials-request">
+            Don't have credentials? <a href="#">Request Access</a>
         </div>
-        <div class="signup-link">
-            Don't have an account? <a href="#">Sign Up</a>
-        </div>
+
         <div id="error-message" class="error"></div>
     </div>
 
