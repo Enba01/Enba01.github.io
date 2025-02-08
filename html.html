@@ -3,40 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Web Page</title>
+  <title>ENBARAJ's Profile</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body and background settings */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header with large, colorful font for the name */
+    header {
+      background-color: #ff6347;
+      text-align: center;
+      padding: 50px 0;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 80px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #4CAF50;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      margin: 0 10px;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      background-color: #45a049;
+      border-radius: 5px;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 40px 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+
+    #about {
+      background-color: #ffeb3b;
+    }
+
+    #skills {
+      background-color: #ff9800;
+      color: white;
+    }
+
+    #contact {
+      background-color: #2196f3;
+      color: white;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
 </head>
 <body>
 
+  <!-- Header with ENBARAJ's name -->
   <header>
-    <h1>Welcome to My Simple Website</h1>
-    <p>ENBARAJ</p> <!-- Displaying the name without hyperlink -->
+    <h1>ENBARAJ</h1>
   </header>
 
+  <!-- Navigation Bar -->
   <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <a href="#about">About ENBARAJ</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <section id="home">
-    <h2>Home Section</h2>
-    <p>This is the home section of the webpage.</p>
-  </section>
-
+  <!-- About Section -->
   <section id="about">
-    <h2>About Section</h2>
-    <p>This section provides information about the website or company.</p>
+    <h2>About ENBARAJ</h2>
+    <p>ENBARAJ is a passionate individual with a wide range of interests. From technology to art, ENBARAJ loves learning new things and sharing knowledge with others.</p>
   </section>
 
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <p>ENBARAJ possesses skills in various fields including web development, graphic design, and digital marketing. Always eager to grow and take on new challenges!</p>
+  </section>
+
+  <!-- Contact Section -->
   <section id="contact">
-    <h2>Contact Section</h2>
-    <p>This is how you can contact us.</p>
+    <h2>Contact ENBARAJ</h2>
+    <p>Feel free to reach out to ENBARAJ through the following channels:</p>
+    <ul>
+      <li>Email: enbaraj@example.com</li>
+      <li>Phone: +123 456 7890</li>
+      <li>Social Media: @ENBARAJOfficial</li>
+    </ul>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 My Simple Website</p>
+    <p>&copy; 2025 ENBARAJ | All Rights Reserved</p>
   </footer>
 
 </body>
