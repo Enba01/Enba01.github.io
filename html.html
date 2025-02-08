@@ -79,7 +79,7 @@
         }
 
         .password-container input {
-            padding-right: 40px; /* Space for eye icon */
+            padding-right: 40px;
         }
 
         .eye-icon {
@@ -166,7 +166,7 @@
         </form>
 
         <div class="credentials-request">
-            Don't have credentials? <a href="#">Request Access</a>
+            Don't have credentials? <a href="request-access.html">Request Access</a>
         </div>
 
         <div id="error-message" class="error"></div>
@@ -179,51 +179,28 @@
 
             if (passwordInput.type === "password") {
                 passwordInput.type = "text";
-                eyeIcon.textContent = "🔒"; // Change to lock icon
+                eyeIcon.textContent = "🔒";
             } else {
                 passwordInput.type = "password";
-                eyeIcon.textContent = "👁️"; // Change back to eye
+                eyeIcon.textContent = "👁️";
             }
         }
 
-        // Allow Enter key to trigger login (on both username and password fields)
-        document.getElementById("username").addEventListener("keypress", function(event) {
-            if (event.key === "Enter") {
-                event.preventDefault();
-                document.getElementById("password").focus();
-            }
-        });
-
-        document.getElementById("password").addEventListener("keypress", function(event) {
-            if (event.key === "Enter") {
-                event.preventDefault();
-                validateLogin();
-            }
-        });
-
         function validateLogin() {
-            // Hardcoded credentials (for demonstration purposes)
             const validUsername = "user123";
             const validPassword = "password123";
-
-            // Get user input values
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
-
-            // Get error message container
             const errorMessage = document.getElementById("error-message");
 
-            // Check if credentials are correct
             if (username === validUsername && password === validPassword) {
-                // Redirect to a welcome page (for demo, just alert)
                 alert("Login successful! Welcome, " + username);
-                window.location.href = "welcome.html"; // Change this to your desired welcome page URL
+                window.location.href = "welcome.html";
             } else {
-                // Show error message if credentials are incorrect
                 errorMessage.textContent = "Invalid username or password. Please try again.";
             }
 
-            return false; // Prevent form submission
+            return false;
         }
     </script>
 
