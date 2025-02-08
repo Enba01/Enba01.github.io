@@ -45,6 +45,7 @@
             padding: 10px 20px;
             border-radius: 10px;
             transition: background 0.3s ease-in-out;
+            cursor: pointer;
         }
 
         .back-link a:hover {
@@ -57,9 +58,19 @@
     <div class="container">
         <div class="big-text">SO BIG AND BOLD</div>
         <div class="back-link">
-            <a href="html.html">Go Back</a>  <!-- Link fixed -->
+            <a href="#" onclick="goBack()">Go Back</a>
         </div>
     </div>
+
+    <script>
+        function goBack() {
+            if (document.referrer) {
+                window.history.back();
+            } else {
+                window.location.href = "html.html"; // Redirect to login page if no history
+            }
+        }
+    </script>
 
 </body>
 </html>
