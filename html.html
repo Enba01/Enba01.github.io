@@ -79,7 +79,7 @@
         }
 
         .password-container input {
-            padding-right: 40px;
+            padding-right: 40px; /* Space for eye icon */
         }
 
         .eye-icon {
@@ -166,7 +166,7 @@
         </form>
 
         <div class="credentials-request">
-            Don't have credentials? <a href="request-access.html">Request Access</a>
+            Don't have credentials? <a href="request.html">Request Access</a>  <!-- Link fixed -->
         </div>
 
         <div id="error-message" class="error"></div>
@@ -179,10 +179,10 @@
 
             if (passwordInput.type === "password") {
                 passwordInput.type = "text";
-                eyeIcon.textContent = "🔒";
+                eyeIcon.textContent = "🔒"; // Change to lock icon
             } else {
                 passwordInput.type = "password";
-                eyeIcon.textContent = "👁️";
+                eyeIcon.textContent = "👁️"; // Change back to eye
             }
         }
 
