@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Enbaraj Welcomes You</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('game.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 420px;
+            padding: 40px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #3d3d3d;
+            margin-bottom: 15px;
+        }
+
+        .welcome-msg {
+            font-size: 18px;
+            color: #007BFF;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+            position: relative;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 2px solid #ccc;
+            outline: none;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        .input-group input:focus {
+            border-color: #007BFF;
+        }
+
+        .password-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .password-container input {
+            padding-right: 40px; /* Space for eye icon */
+        }
+
+        .eye-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 20px;
+            color: #666;
+            transition: color 0.3s;
+        }
+
+        .eye-icon:hover {
+            color: #007BFF;
+        }
+
+        .button {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .credentials-request {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #007BFF;
+        }
+
+        .credentials-request a {
+            text-decoration: none;
+        }
+
+        .credentials-request a:hover {
+            text-decoration: underline;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <div class="welcome-msg">Enbaraj Welcomes You!</div>
+        <form id="loginForm" onsubmit="return validateLogin()">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <span class="eye-icon" onclick="togglePassword()" id="toggleEye">👁️</span>
+                </div>
+            </div>
+            <button type="submit" class="button">Login</button>
+        </form>
+
+        <div class="credentials-request">
+            Don't have credentials? <a href="request.html">Request Access</a>  <!-- Link fixed -->
+        </div>
+
+        <div id="error-message" class="error"></div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById("password");
+            const eyeIcon = document.getElementById("toggleEye");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIcon.textContent = "🔒"; // Change to lock icon
+            } else {
+                passwordInput.type = "password";
+                eyeIcon.textContent = "👁️"; // Change back to eye
+            }
+        }
+
+        function validateLogin() {
+            const validUsername = "user123";
+            const validPassword = "password123";
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const errorMessage = document.getElementById("error-message");
+
+            if (username === validUsername && password === validPassword) {
+                alert("Login successful! Welcome, " + username);
+                window.location.href = "welcome.html";
+            } else {
+                errorMessage.textContent = "Invalid username or password. Please try again.";
+            }
+
+            return false;
+        }
+    </script>
+
+</body>
+</html>
